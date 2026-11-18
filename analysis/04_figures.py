@@ -11,6 +11,10 @@ BASE = pathlib.Path(__file__).resolve().parent
 CSV = BASE.parent / "data" / "naia_manila_2006_2025_hourly.csv"
 
 df = pd.read_csv(CSV, parse_dates=["time"], engine="python")
+# Meteostat hourly timestamps are UTC (verified 2026-11-04 by diurnal-physics check:
+# raw-hour DB max 05h == 13h local, raw-hour DB min 22h == 06h local for Manila).
+# Convert to Philippine Standard Time (UTC+8, no DST) before any calendar aggregation.
+df["time"] = df["time"] + pd.Timedelta(hours=8)
 df = df[(df.time >= "2006-01-01") & (df.time < "2025-01-01")].dropna(subset=["temp", "rhum"]).copy()
 T, RH = df.temp, df.rhum
 WB = (T * np.arctan(0.151977 * np.sqrt(RH + 8.313659))
@@ -52,6 +56,7 @@ plt.close(fig)
 ann = df.assign(flag=s2).groupby(df.time.dt.year)["flag"].sum()
 fig, ax = plt.subplots(figsize=(7, 3.6))
 ax.bar(ann.index, ann.values, color="#2c6fbb")
+ax.set_xticks(range(2006, 2025, 2))
 ax.axhline(ann.mean(), ls="--", c="k", lw=1, label=f"mean {ann.mean():.0f} h")
 ax.set_ylabel("hours / year")
 ax.set_xlabel("year")

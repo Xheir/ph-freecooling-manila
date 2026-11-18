@@ -1,0 +1,16 @@
+08 EXTENDED CHECKS (NAIA 98429, 2006-2024, 165,746 valid rows)
+WB ladder (DB<=32 & WB<=x):
+  WB<=21C: 3,705 h total = 195 h/yr = 2.2% of valid obs
+  WB<=22C: 9,554 h total = 503 h/yr = 5.8% of valid obs
+  WB<=23C: 20,807 h total = 1,095 h/yr = 12.6% of valid obs
+  WB<=24C: 38,649 h total = 2,034 h/yr = 23.3% of valid obs
+  WB<=25C: 67,606 h total = 3,558 h/yr = 40.8% of valid obs
+S2 total: 20,807 h; S3 total: 19,526 h
+S2&S3 overlap: 12,729 h = 669.9 h/yr
+S3-only beyond S2: 6,797 h = 357.7 h/yr
+Diurnal peak: 05:00 = 77.2 h/yr; trough: 14:00 = 15.6 h/yr
+Block shares of S2: 17-23h 29% (6,108 h); 09-16h 17% (3,570 h); 22-06h 53% (10,972 h)
+RH>=100 rows (valid set): 14,875 (9.0%); S2 hours among them: 81 = 4.3 h/yr = 0.4% of S2
+RH>=100 rows incl. missing-value rows (raw window): 14875; RH<5 rows: 2
+Bottom-3 years: [(2010, 672), (2006, 708), (2009, 741)]
+Top-3 years: [(2014, 1824), (2011, 1838), (2015, 1857)]

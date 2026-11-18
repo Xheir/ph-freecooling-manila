@@ -1,4 +1,5 @@
-pandas
-numpy
-matplotlib
-meteostat
+pandas>=2.0
+numpy>=1.24
+scipy>=1.10
+matplotlib>=3.7
+meteostat>=1.6  # data fetch only, not needed to run the analysis

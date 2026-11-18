@@ -19,6 +19,10 @@ lanina_djf = {2008, 2011, 2012, 2017, 2018, 2021, 2022, 2023}
 
 df = pd.read_csv(CSV, parse_dates=["time"], engine="python",
                  dtype={"temp": "float32", "rhum": "float32"})
+# Meteostat hourly timestamps are UTC (verified 2026-11-04 by diurnal-physics check:
+# raw-hour DB max 05h == 13h local, raw-hour DB min 22h == 06h local for Manila).
+# Convert to Philippine Standard Time (UTC+8, no DST) before any calendar aggregation.
+df["time"] = df["time"] + pd.Timedelta(hours=8)
 df = df[(df.time >= "2006-01-01") & (df.time < "2025-01-01")].dropna(subset=["temp", "rhum"]).copy()
 T = df.temp.astype("float64"); RH = df.rhum.astype("float64")
 WB = (T*np.arctan(0.151977*np.sqrt(RH+8.313659)) + np.arctan(T+RH) - np.arctan(RH-1.676331)

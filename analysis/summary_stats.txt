@@ -1,0 +1,30 @@
+CANONICAL SCREENING SUMMARY (NAIA 98429, 2006-2024, 19 full years)
+Input: 165,746 valid hourly records from 166,006 archived rows in the study window.
+Accounting: calendar 166,560 h (19 yrs incl. 5 leap days); absent rows 554; rows w/ missing TEMP/RHUM 260; valid paired 165,746.
+Coverage: 99.5% of calendar hours; 99.8% of archived rows. Screen percentages use valid-obs denominator.
+WB: Stull (2011) approx from DB+RH; timestamps station-local standard time (PST, UTC+8).
+
+S1_direct_coolsupply (DB<=18 & WB<=14): 1 h total = 0 h/yr = 0.0% of valid obs
+S2_waterside_WB23 (DB<=32 & WB<=23): 20,807 h total = 1,095 h/yr = 12.6% of valid obs
+S2b_waterside_WB20 (WB<=20): 1,030 h total = 54 h/yr = 0.6% of valid obs
+S2c_waterside_WB18 (WB<=18): 54 h total = 3 h/yr = 0.0% of valid obs
+S3_hothall_mixed (DB 15-27 & RH<=80): 19,526 h total = 1,028 h/yr = 11.8% of valid obs
+S4_A1like_meteo (DB 15-32 & RH 20-80): 84,340 h total = 4,439 h/yr = 50.9% of valid obs
+
+S2 (headline) detail:
+  monthly h/yr: 1:334, 2:304, 3:207, 4:58, 5:4, 6:0, 7:1, 8:1, 9:0, 10:12, 11:33, 12:141
+  annual range: 672 h (2010) to 1857 h (2015)
+  mean: 1095 h/yr, std: 406 h
+
+Diurnal split (S2):
+  22:00-06:59 share: 53% of eligible hours
+
+VERDICT (relabeled 2026-10-15 after Opus review):
+- Direct cool-supply air-side economization: NOT feasible (~0 h/yr).
+- Water-side/evaporative WB<=23C opportunity window: ~1,100 h/yr (12.6%) - the headline.
+- Indirect air-to-air applicability is NOT quantified by this screen; it needs separate
+  temperature/enthalpy and exchanger-effectiveness modeling.
+- Hot-hall mixed air-side (15-27C, RH<=80): additional direct-use window, see S3 above.
+- A1-like meteo window (S4) is CONTEXT ONLY: outdoor air is within allowable-like
+  conditions ~half the year, but that is not free-cooling availability because supply
+  air must be cooler than the hall return. Do NOT equate S4 with economizer hours.

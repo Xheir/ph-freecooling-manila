@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this code or analysis, please cite the preprint below."
+title: "Free-Cooling Availability for Metro Manila Data Centers: A Weather-Data Analysis of Economizer Opportunity in a Tropical Climate - companion code"
+type: software
+authors:
+  - family-names: Provido
+    given-names: Giuseppe Arlo C.
+    affiliation: "Department of Mechanical Engineering, De La Salle University - Dasmarinas"
+    email: gac.provido@gmail.com
+  - family-names: Bongcales
+    given-names: Gian Carlo M.
+    affiliation: "Department of Mechanical Engineering, De La Salle University - Dasmarinas"
+    email: gmbongcales@dlsud.edu.ph
+repository-code: "https://github.com/Xheir/ph-freecooling-manila"
+url: "https://doi.org/10.2139/ssrn.7695618"
+license: MIT
+date-released: 2026-11-18
+keywords:
+  - data center cooling
+  - free cooling
+  - economizer
+  - tropical climate
+  - wet-bulb
+  - Philippines
+preferred-citation:
+  type: article
+  title: "Free-Cooling Availability for Metro Manila Data Centers: A Weather-Data Analysis of Economizer Opportunity in a Tropical Climate"
+  authors:
+    - family-names: Provido
+      given-names: Giuseppe Arlo C.
+    - family-names: Bongcales
+      given-names: Gian Carlo M.
+  year: 2026
+  month: 11
+  doi: "10.2139/ssrn.7695618"
+  url: "https://doi.org/10.2139/ssrn.7695618"
+  publisher:
+    name: SSRN
